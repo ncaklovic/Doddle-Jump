@@ -12,9 +12,8 @@ private:
 	int width;
 	int height;
 	int distinct;
-	Point* platformPosition;
-	const float cDy = 0.3;
-	const int cNumberOfPlatforms = 10;
+	std::vector<Point>& platformPosition;
+	const float cDy = 0.3f;
 	const int cPlayerWidth = 50;
 	const int cPlatformWidth = 70;
 	const int cMovePlayer = 5;
@@ -46,6 +45,6 @@ public:
 	void setInfo(int width, int height, int distinct, int deltaY);
 
 	//Constuctor & Destructor
-	Player(Point* p);
+	Player(std::vector<Point>&);
 };
 
